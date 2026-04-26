@@ -21,8 +21,15 @@ dependencyResolutionManagement {
 
 rootProject.name = "Wheather"
 include(":app")
-include(":auth")
-include(":splash")
+include(":feature-auth-impl")
+include(":feature-splash-impl")
 
 include(":core:session")
 project(":core:session").projectDir = file("core/session")
+include(":core:designsystem")
+include(":feature-home-impl")
+include(":core:ui")
+include(":core:network")
+include(":core:di")
+include(":core-navigation")
+include(":feature-auth-api")
