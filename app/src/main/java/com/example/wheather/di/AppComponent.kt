@@ -23,7 +23,7 @@ import javax.inject.Singleton
         AuthModule::class,
         ViewModelFactoryModule::class,
         HomeModule::class,
-        DispatcherModule::class
+        DispatcherModule::class,
     ]
 )
 interface AppComponent {

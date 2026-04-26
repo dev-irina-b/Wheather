@@ -25,7 +25,7 @@ import com.example.home.presentation.states.HomeUiState
 import com.example.home.presentation.viewmodels.HomeViewModel
 
 @Composable
-fun HomeRoute(modifier: Modifier = Modifier) {
+fun HomeScreenRoute(modifier: Modifier = Modifier) {
     val viewModelFactory = LocalViewModelFactory.current
     val viewModel: HomeViewModel = viewModel(factory = viewModelFactory)
     val uiState = viewModel.state.collectAsStateWithLifecycle()

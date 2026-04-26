@@ -61,4 +61,7 @@ dependencies {
     implementation(project(":core:ui"))
     implementation(project(":core:session"))
     implementation(project(":core-navigation"))
+    implementation(project(":feature-auth-api"))
+    implementation(project(":feature-home-api"))
+    implementation(project(":feature-splash-api"))
 }

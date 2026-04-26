@@ -61,4 +61,6 @@ dependencies {
     implementation(project(":core:network"))
     implementation(project(":core:di"))
     implementation(project(":core-navigation"))
+    implementation(project(":feature-auth-api"))
+    implementation(project(":feature-home-api"))
 }

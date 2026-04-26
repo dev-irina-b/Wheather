@@ -34,9 +34,9 @@ import com.example.splash.presentation.SplashViewModel
 import kotlinx.coroutines.delay
 
 @Composable
-internal fun SplashRoute(
-    onAuthorized: () -> Unit,
-    onUnauthorized: () -> Unit
+internal fun SplashScreenRoute(
+    onNavigateToHome: () -> Unit,
+    onNavigateToAuth: () -> Unit
 ) {
     val viewModelFactory = LocalViewModelFactory.current
 
@@ -46,8 +46,8 @@ internal fun SplashRoute(
     LaunchedEffect(state.destination) {
 
         when (state.destination) {
-            is SplashDestination.Home -> onAuthorized()
-            is SplashDestination.Auth -> onUnauthorized()
+            is SplashDestination.Home -> onNavigateToHome()
+            is SplashDestination.Auth -> onNavigateToAuth()
             null -> Unit
         }
     }

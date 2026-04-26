@@ -35,11 +35,10 @@ import com.example.auth.presentation.effect.AuthEffect
 import com.example.auth.presentation.intent.AuthIntent
 import com.example.auth.presentation.state.AuthUiState
 import com.example.common.ui.LocalViewModelFactory
-import com.example.core_navigation.Navigator
 
 @Composable
-fun AuthRoute(
-    navigator: Navigator
+fun AuthScreenRoute(
+    onNavigateToHome: () -> Unit = {}
 ) {
     val viewModelFactory = LocalViewModelFactory.current
     val viewModel: AuthViewModel = viewModel(factory = viewModelFactory)
@@ -48,7 +47,7 @@ fun AuthRoute(
     LaunchedEffect(Unit) {
         viewModel.effect.collect { effect ->
             when (effect) {
-                AuthEffect.NavigateHome -> {}
+                AuthEffect.NavigateHome -> onNavigateToHome()
                 is AuthEffect.ShowMessage -> Unit
             }
         }

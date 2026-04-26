@@ -73,7 +73,9 @@ dependencies {
     implementation(libs.dagger)
     kapt(libs.dagger.compiler)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(project(":feature-splash-api"))
     implementation(project(":feature-splash-impl"))
+    implementation(project(":feature-auth-api"))
     implementation(project(":feature-auth-impl"))
     implementation(project(":feature-home-impl"))
 
